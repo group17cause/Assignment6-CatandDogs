@@ -66,7 +66,7 @@ class SearchDogFact extends Component {
                 : <p>{this.state.dogFact}</p>
                 }
                 <div>
-                    <button className="newDogPictureButton" onClick={this.fetchRandomDogFact}>New Doggo Picture!</button>
+                    <button className="newDogPictureButton" onClick={this.fetchRandomDogFact}>New Doggo Fact!</button>
                 </div>
             </div>
 		)
