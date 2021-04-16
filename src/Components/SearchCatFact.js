@@ -5,11 +5,16 @@ class SearchCatFact extends Component {
 	constructor(props){
 		super(props);
 		this.state = {
-            catFact : "",       
+            catFact : "",
+            renderInitialCatFact : true,
+            initialCatFact : ""
 		}
 	}
 
     fetchRandomCatFact = async () => {
+        this.setState({
+            renderInitialCatFact : false
+        });
         try {
             const linkToAPI = "https://cat-fact.herokuapp.com/facts/random?animal_type=cat&amount=1";
             let res = await axios.get(linkToAPI);
@@ -23,18 +28,44 @@ class SearchCatFact extends Component {
                  * The request was made and the server responded with a
                  * status code that falls out of the range of 2xx
                  */
+
                 console.log(error.res.data); //Not Found
                 console.log(error.res.status); //404
             }
         }
     } 
-        
+
+    setInitialRandomCatFact = async () => {
+        try {
+            const linkToAPI = "https://cat-fact.herokuapp.com/facts/random?animal_type=cat&amount=1";
+            let res = await axios.get(linkToAPI);
+            this.setState({
+                initialCatFact : res.data.text
+            });
+        } catch (error) {
+            if (error.response) {
+                /*
+                 * The request was made and the server responded with a
+                 * status code that falls out of the range of 2xx
+                 */
+                console.log(error.res.data); //Not Found
+                console.log(error.res.status); //404
+            }
+        }
+    }
+    
+    // Work around because Axios returns object[Promise], which cannot be rendered as a child
+    componentDidMount() {
+        this.setInitialRandomCatFact();
+    }
+
 	render() {
 		return (
             <div className = "catFact">
-                <p>
-                    {this.state.catFact}
-                </p>
+                {this.state.renderInitialCatFact 
+                ? <p>{this.state.initialCatFact}</p>
+                : <p>{this.state.catFact}</p> 
+                }
                 <div>
                     <button className="newCatFactButton" onClick={this.fetchRandomCatFact}>New Cat Fact!</button>
                 </div>
