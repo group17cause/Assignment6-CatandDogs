@@ -2,12 +2,13 @@
 import axios from 'axios';
 import { Component } from 'react';
 import SearchCatFact from "./SearchCatFact"
-
+import catsos from "../Images/catsos.jpg"
 class SearchCatPicture extends Component {
 	constructor(props){
 		super(props);
 		this.state = {
-			linkToCatPicture : "",     
+			linkToCatPicture : "",
+            initialCatPicture : true     
 		}
 	}
 
@@ -32,10 +33,14 @@ class SearchCatPicture extends Component {
     } 
         
 	render() {
+        const initialCatPicture = this.state.initialCatPicture;
 		return (
 		<div className = "catSide">
             <h1>Or are you a Cat Person?</h1>
-            <img className = "catPicture" src = {this.state.linkToCatPicture} alt="Some Cat"></img>
+            {initialCatPicture 
+            ? <img src = {catsos} alt = "C A T S O S"></img>
+            : <img className = "catPicture" src = {this.state.linkToCatPicture} alt="Some Cat"></img>
+            }
             <div> 
                 <button className="newCatPictureButton" onClick={this.fetchRandomCatPicture}>New Catto Picture!</button>
             </div>
