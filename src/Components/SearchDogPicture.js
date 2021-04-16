@@ -3,16 +3,16 @@ import axios from 'axios';
 import { Component } from 'react';
 
 // https://dog.ceo/dog-api/
-class SearchDogPictures extends Component {
+class SearchDogPicture extends Component {
 	constructor(props){
 		super(props);
 		this.state = {
-			linkToDogPicture : "",           
+			linkToDogPicture : "",     
 		}
 	}
 
     fetchRandomDogPicture = async () => {
-        let linkToAPI = "https://dog.ceo/api/breeds/image/random";
+        const linkToAPI = "https://dog.ceo/api/breeds/image/random";
         try {
             let res = await axios.get(linkToAPI);
             this.setState({
@@ -25,24 +25,24 @@ class SearchDogPictures extends Component {
                  * The request was made and the server responded with a
                  * status code that falls out of the range of 2xx
                  */
-                console.log(error.response.data); //Not Found
-                console.log(error.response.status); //404
+                console.log(error.res.data); //Not Found
+                console.log(error.res.status); //404
             }
         }
     } 
-    
+        
 	render() {
 		return (
 		<div className = "dogSide">
-			<div className = "dogPicture">
-				<h1>Feeling Down? Here's a Doggo!</h1>
-				<img src = {this.state.linkToDogPicture} alt="Some Doggo"></img>
-			</div>
-            <button className="search-button" onClick={this.fetchRandomDogPicture}>New Doggo Picture!</button>
+            <h1>Are you a Dog Person?</h1>
+            <img class = "dogPicture" src = {this.state.linkToDogPicture} alt="Some Doggo"></img>
+            <div> 
+                <button className="search-button" onClick={this.fetchRandomDogPicture}>New Doggo Picture!</button>
+            </div>
 	    </div>    
 		)
 	}
 }
 
 
-export default SearchDogPictures
+export default SearchDogPicture

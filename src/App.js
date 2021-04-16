@@ -1,14 +1,11 @@
-import './App.css';
-import './Components/SearchDogPictures'
-import SearchDogPictures from './Components/SearchDogPictures';
+import './Components/SearchDogPicture'
+import SearchDogPicture from './Components/SearchDogPicture';
 
 function App () {
     return (
         <div>
-            <SearchDogPictures>
-
-            </SearchDogPictures>
-  
+            <SearchDogPicture>
+            </SearchDogPicture>
         </div>
     );
   }
