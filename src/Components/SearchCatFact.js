@@ -42,6 +42,7 @@ class SearchCatFact extends Component {
             this.setState({
                 initialCatFact : res.data.text
             });
+            console.log(this.state.initialCatFact);
         } catch (error) {
             if (error.response) {
                 /*
