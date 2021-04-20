@@ -68,7 +68,7 @@ class SearchCatFact extends Component {
                 : <p>{this.state.catFact}</p> 
                 }
                 <div>
-                    <button className="newCatFactButton" onClick={this.fetchRandomCatFact}>New Catto Fact!</button>
+                    <button className="newCatPictureButton" onClick={this.fetchRandomCatFact}>New Catto Fact!</button>
                 </div>
             </div>
 		)
