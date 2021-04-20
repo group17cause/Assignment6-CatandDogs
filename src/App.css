@@ -1,0 +1,61 @@
+.container{
+   
+    display: flex;
+    justify-content: space-between;
+}
+h1{
+    font-family: fantasy;
+    font-weight: bold;
+    
+}
+p{
+    width: 60vh;
+    font-family: cursive;
+    color: white;
+    font-size: 20px;
+}
+.dogPicture {
+    height: 65vh;
+    width: 65vh;
+}
+
+.newDogPictureButton{
+    border-radius: 12px;
+    background-color:  rgb(165, 106, 106);
+    border: 2px solid black;
+    font-weight: bold;
+    font-size: 14px;
+    color:black;
+    padding: 10px;
+    transition-duration: 0.4s;
+}
+
+.newDogPictureButton:hover{
+    font-size: 15px;
+    color: white;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+    
+}
+
+.catPicture, .init{
+    height: 65vh;
+    width: 65vh;
+}
+.newCatPictureButton{
+    border-radius: 12px;
+    background-color: rgb(165, 106, 106);
+    border: 2px solid black;
+    font-size: 14px;
+    color: black;
+    font-weight: bold;
+    padding: 10px;
+    transition-duration: 0.4s;
+}
+
+.newCatPictureButton:hover{
+    font-size: 15px;
+    color: white;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+    
+    
+}
