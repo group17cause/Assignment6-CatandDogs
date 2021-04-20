@@ -2,6 +2,7 @@ import axios from 'axios';
 import { Component } from 'react';
 import SearchDogFact from "./SearchDogFact"
 import festiveboy from "../Images/festiveboy.jpg"
+import "./../App.css"
 
 class SearchDogPicture extends Component {
 	constructor(props){
@@ -42,7 +43,7 @@ class SearchDogPicture extends Component {
 		<div defer className = "dogSide">
             <h1>Are you a Dog Person?</h1>
             {initialDogPicture 
-            ? <img src = {festiveboy} alt = "F E S T I V E B O Y"></img>
+            ? <img className = "init" src = {festiveboy} alt = "F E S T I V E B O Y"></img>
             : <img className = "dogPicture" src = {this.state.linkToDogPicture} alt="Some Doggo"></img>
             }
             <div> 

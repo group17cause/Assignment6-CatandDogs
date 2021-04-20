@@ -3,6 +3,7 @@ import axios from 'axios';
 import { Component } from 'react';
 import SearchCatFact from "./SearchCatFact"
 import catsos from "../Images/catsos.jpg"
+import "./../App.css"
 class SearchCatPicture extends Component {
 	constructor(props){
 		super(props);
@@ -14,6 +15,9 @@ class SearchCatPicture extends Component {
 
     fetchRandomCatPicture = async () => {
         const linkToAPI = "https://thatcopy.pw/catapi/rest/";
+        this.setState({
+            initialCatPicture : false
+        });
         try {
             let res = await axios.get(linkToAPI);
             this.setState({
@@ -38,7 +42,7 @@ class SearchCatPicture extends Component {
 		<div className = "catSide">
             <h1>Or are you a Cat Person?</h1>
             {initialCatPicture 
-            ? <img src = {catsos} alt = "C A T S O S"></img>
+            ? <img className = "init" src = {catsos} alt = "C A T S O S"></img>
             : <img className = "catPicture" src = {this.state.linkToCatPicture} alt="Some Cat"></img>
             }
             <div> 
