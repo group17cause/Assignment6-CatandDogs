@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/Assignment6-CatandDogs/static/css/main.fe1cd51d.chunk.css",
+    "main.js": "/Assignment6-CatandDogs/static/js/main.2e286448.chunk.js",
+    "main.js.map": "/Assignment6-CatandDogs/static/js/main.2e286448.chunk.js.map",
+    "runtime-main.js": "/Assignment6-CatandDogs/static/js/runtime-main.94a50fec.js",
+    "runtime-main.js.map": "/Assignment6-CatandDogs/static/js/runtime-main.94a50fec.js.map",
+    "static/js/2.ca5e2a61.chunk.js": "/Assignment6-CatandDogs/static/js/2.ca5e2a61.chunk.js",
+    "static/js/2.ca5e2a61.chunk.js.map": "/Assignment6-CatandDogs/static/js/2.ca5e2a61.chunk.js.map",
+    "static/js/3.b39ab849.chunk.js": "/Assignment6-CatandDogs/static/js/3.b39ab849.chunk.js",
+    "static/js/3.b39ab849.chunk.js.map": "/Assignment6-CatandDogs/static/js/3.b39ab849.chunk.js.map",
+    "index.html": "/Assignment6-CatandDogs/index.html",
+    "static/css/main.fe1cd51d.chunk.css.map": "/Assignment6-CatandDogs/static/css/main.fe1cd51d.chunk.css.map",
+    "static/js/2.ca5e2a61.chunk.js.LICENSE.txt": "/Assignment6-CatandDogs/static/js/2.ca5e2a61.chunk.js.LICENSE.txt",
+    "static/media/catsos.d994857f.jpg": "/Assignment6-CatandDogs/static/media/catsos.d994857f.jpg",
+    "static/media/festiveboy.88cc9a48.jpg": "/Assignment6-CatandDogs/static/media/festiveboy.88cc9a48.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.94a50fec.js",
+    "static/js/2.ca5e2a61.chunk.js",
+    "static/css/main.fe1cd51d.chunk.css",
+    "static/js/main.2e286448.chunk.js"
+  ]
+}
